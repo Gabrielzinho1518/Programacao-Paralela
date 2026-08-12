@@ -1,0 +1,73 @@
+# Atividade 1 – Fundamentos de Programação Paralela
+
+## 1. Computação Distribuída x Computação Paralela
+
+**Computação Paralela:** utiliza vários processadores ou núcleos para executar partes de um problema simultaneamente, geralmente buscando diminuir o tempo de execução.
+
+**Computação Distribuída:** utiliza vários computadores independentes, conectados por uma rede, que trabalham em conjunto. Cada máquina possui sua própria memória.
+
+**Programação Paralela:** desenvolve programas dividindo uma tarefa em partes que podem ser executadas simultaneamente.
+
+**Programação Distribuída:** desenvolve programas para diferentes computadores que trocam informações pela rede e cooperam para realizar uma tarefa.
+
+---
+
+## 2. Taxonomia de Flynn
+
+| Classe   | Característica                                   | Exemplo real                                                     |
+| -------- | ------------------------------------------------ | ---------------------------------------------------------------- |
+| **SISD** | Uma instrução e um dado por vez                  | Intel 8086                                                       |
+| **SIMD** | Uma instrução processa vários dados              | Intel Xeon com instruções AVX                                    |
+| **MISD** | Várias instruções sobre o mesmo dado             | Sistemas tolerantes a falhas, como alguns sistemas aeroespaciais |
+| **MIMD** | Várias instruções e vários dados simultaneamente | Supercomputador Frontier                                         |
+
+---
+
+## 3. Processadores Vetoriais
+
+Processadores vetoriais são projetados para executar a mesma operação sobre vários elementos de dados ao mesmo tempo. São muito utilizados em cálculos científicos, simulações e aplicações de alto desempenho.
+
+**Exemplos:**
+
+* **Fujitsu A64FX:** processador ARM usado no supercomputador Fugaku, com 48 núcleos e suporte a operações vetoriais SVE.
+* **NEC SX-Aurora TSUBASA:** utiliza processamento vetorial de alto desempenho, voltado principalmente para computação científica.
+
+Uma das principais vantagens dos processadores vetoriais é a capacidade de realizar muitos cálculos semelhantes simultaneamente.
+
+---
+
+## 4. Classes de arquiteturas de computadores
+
+| Arquitetura                                 | Característica                                                          | Exemplo                                           |
+| ------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------- |
+| **PVP – Processadores Vetoriais Paralelos** | Processadores especializados em operações sobre vetores                 | NEC SX-Aurora TSUBASA                             |
+| **SMP – Multiprocessadores Simétricos**     | Vários processadores compartilham a mesma memória                       | Servidores com múltiplos processadores Intel Xeon |
+| **MPP – Máquinas Maciçamente Paralelas**    | Grande quantidade de processadores trabalhando em paralelo              | IBM Blue Gene/Q                                   |
+| **DSM – Memória Compartilhada Distribuída** | Memória fisicamente distribuída, mas apresentada como compartilhada     | SGI Origin 3000                                   |
+| **NOW – Network of Workstations**           | Computadores comuns conectados por rede para executar tarefas paralelas | Cluster de PCs conectado por Ethernet             |
+| **COW – Cluster of Workstations**           | Conjunto de computadores independentes agrupados para processamento     | Cluster Beowulf                                   |
+
+---
+
+## 5. Supercomputador do TOP500 – LineShine
+
+O **LineShine** é um supercomputador instalado no National Supercomputing Centre in Shenzhen (NSCS), na China. Na lista **TOP500 de junho de 2026**, ocupa a **1ª posição**, sendo o primeiro sistema da lista a ultrapassar 2 exaflops de desempenho sustentado.
+
+**Arquitetura:** MPP (Máquina Maciçamente Paralela), pois utiliza milhões de núcleos distribuídos em muitos processadores trabalhando simultaneamente.
+
+**Configuração principal:**
+
+* 13.789.440 núcleos;
+* Processadores LX2 com 304 núcleos e 1,55 GHz;
+* Plataforma LingKun;
+* Interconexão LingQi;
+* Sistema operacional Kylin OS;
+* Desempenho HPL de aproximadamente **2,198 exaflops**.
+
+**Finalidade:** computação de alto desempenho, utilizada para grandes cálculos científicos e aplicações que exigem enorme capacidade computacional.
+
+**País:** China
+**Classificação TOP500:** 1º lugar (junho de 2026)
+**Sistema operacional:** Kylin OS
+
+**Página oficial no TOP500:** [LineShine – TOP500](https://www.top500.org/lists/top500/2026/06/?utm_source=chatgpt.com)
